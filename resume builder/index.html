@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form id="resumeForm">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <input type="text" placeholder="Full Name" id="fullName" required>
+                <input type="email" placeholder="Email" id="email" required>
+                <input type="tel" placeholder="Phone Number" id="phoneNumber" required>
+            </fieldset>
+
+            <!-- Education -->
+            <fieldset>
+                <legend>Education</legend>
+                <input type="text" placeholder="Degree" id="degree" required>
+                <input type="text" placeholder="University" id="university" required>
+                <input type="text" placeholder="Graduation Year" id="gradYear" required>
+            </fieldset>
+
+            <!-- Work Experience -->
+            <fieldset>
+                <legend>Work Experience</legend>
+                <input type="text" placeholder="Job Title" id="jobTitle" required>
+                <input type="text" placeholder="Company" id="company" required>
+                <input type="text" placeholder="Years Worked" id="yearsWorked" required>
+            </fieldset>
+
+            <!-- Skills -->
+            <fieldset>
+                <legend>Skills</legend>
+                <textarea placeholder="Skills" id="skills" required></textarea>
+            </fieldset>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+
+        <div id="resumePreview" class="preview"></div>
+        <button id="downloadPDF">Download PDF</button>
+        <button id="downloadDOC">Download DOC</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<label for="template">Select Template:</label>
+<select id="template">
+    <option value="template1">Template 1</option>
+    <option value="template2">Template 2</option>
+    <option value="template3">Template 3</option>
+</select>
